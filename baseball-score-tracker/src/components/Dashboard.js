@@ -4,10 +4,10 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <button>strike</button>
-        <button>ball</button>
-        <button>foul</button>
-        <button>hit</button>
+        <button onClick={this.props.strike}>strike</button>
+        <button onClick={this.props.ball}>ball</button>
+        <button onClick={this.props.foul}>foul</button>
+        <button onClick={this.props.hit}>hit</button>
       </div>
     )
   }
