@@ -8,8 +8,8 @@ class App extends Component {
   state = {
     strikes: 0,
     balls: 0,
-    foul: 0,
-    hit: 0,
+    fouls: 0,
+    hits: 0,
   }
   
   strike = () => {
@@ -17,8 +17,8 @@ class App extends Component {
       this.setState({
         strikes: 0,
         balls: 0,
-        foul: 0,
-        hit: 0,
+        fouls: 0,
+        hits: 0,
       })
     } else {
       this.setState({
@@ -33,8 +33,8 @@ class App extends Component {
       this.setState({
         strikes: 0,
         balls: 0,
-        foul: 0,
-        hit: 0,
+        fouls: 0,
+        hits: 0,
       })
     } else {
       this.setState({
@@ -52,7 +52,7 @@ class App extends Component {
     } else {
       this.setState({
         ...this.state,
-        strikes: this.state.strikes +1
+        fouls: this.state.fouls +1
       })
     }
   }
@@ -61,8 +61,8 @@ class App extends Component {
     this.setState({
       strikes: 0,
       balls: 0,
-      foul: 0,
-      hit: 0,
+      fouls: 0,
+      hits: 0,
     })
   }
 
