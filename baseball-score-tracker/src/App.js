@@ -47,12 +47,14 @@ class App extends Component {
   foul = () => {
     if (this.state.strikes === 2) {
       this.setState({
-        ...this.state
+        ...this.state,
+        fouls: this.state.fouls +1
       })
     } else {
       this.setState({
         ...this.state,
-        fouls: this.state.fouls +1
+        fouls: this.state.fouls +1,
+        strikes: this.state.strikes + 1
       })
     }
   }
