@@ -1,25 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import Dashboaard from './components/Dashboard';
+import Display from './components/Display';
 import './App.css';
 
 class App extends Component {
+  state = {
+    strikes: 0,
+    balls: 0,
+    foul: 0,
+    hit: 0,
+  }
+
+  strike = () => {
+    
+  }
+
+  ball = () => {
+
+  }
+
+  foul = () => {
+
+  }
+
+  hit = () => {
+
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Display 
+          strikes={this.state.strikes} 
+          balls={this.state.balls} 
+          fouls={this.state.fouls} 
+          hits={this.state.hits} 
+        />
+        <Dashoard 
+          strike={this.strike}
+          ball={this.ball}
+          foul={this.foul}
+          hit={this.hit}
+        />
       </div>
     );
   }
